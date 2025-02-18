@@ -2,18 +2,115 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btnSumar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sumar"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btnRestar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Restar"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toEndOf="@id/btnSumar"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btnAugmentar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Augmentar"
+        app:layout_constraintTop_toBottomOf="@id/btnSumar"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btnDisminuir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Disminuir"
+        app:layout_constraintTop_toBottomOf="@id/btnRestar"
+        app:layout_constraintStart_toEndOf="@id/btnAugmentar"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btnAmagar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Amagar"
+        app:layout_constraintTop_toBottomOf="@id/btnAugmentar"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mostrar"
+        app:layout_constraintTop_toBottomOf="@id/btnDisminuir"
+        app:layout_constraintStart_toEndOf="@id/btnAmagar"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btnColorText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Color text"
+        app:layout_constraintTop_toBottomOf="@id/btnAmagar"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btnColorFons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Color fons"
+        app:layout_constraintTop_toBottomOf="@id/btnMostrar"
+        app:layout_constraintStart_toEndOf="@id/btnColorText"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
